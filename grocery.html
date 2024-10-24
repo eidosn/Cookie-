@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cookie!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grocery.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>   
+    <div class="nav-container">
+        <p class="nav-title">Cookie</p>
+      <div class="nav-buttons">
+        <div class="nav-button"><button class="nv-btn"  onclick="location.href='../1mainpage.html'" type="button">Home</button></div>
+        <div class="nav-button"><button class="nv-btn"  onclick="location.href='../index.html'" type="button">Food Quiz</button></div>
+        <div class="nav-button"><button class="nv-btn"  onclick="location.href='cheapUniqueRecipes/Foods.html'" type="button">Recipes</button></div>
+        <div class="nav-button"><button class="nv-btn" onclick="location.href='../grocery.html'" type="button">Grocery List</button></div>
+        <div class="nav-button"><button class="nv-btn" onclick="showabout()" type="button">About</button></div>
+        </div>
+    </div>
+    
+    <div id="groceryList" class="GroceryList">
+        <h1>Grocery List</h1>
+    <h2>My Shopping List</h2>
+        <p>Type in items as a reminder for when you head to the grocery store.</p>
+        <input type="text" id="input" placeholder="Item Name">
+        <button class="grocerybtns" type="submit" onclick="add()">Add to List</button>
+        <ol type = "checkbox" class="list" id="output"></ol>
+        <button class="grocerybtns" id="reset" onclick="reset()">Reset List</button>
+    </div>
+
+</body>
+    <script src="grocery.js"></script>
+    <script src="navbar.js"></script>
+</body>
+</html>

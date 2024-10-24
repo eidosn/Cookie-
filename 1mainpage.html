@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cookie!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+
+<body>
+    <div class="nav-container">
+        <p class="nav-title">Cookie</p>
+      <div class="nav-buttons">
+        <div class="nav-button"><button class="nv-btn"  onclick="location.href='../1mainpage.html'" type="button">Home</button></div>
+        <div class="nav-button"><button class="nv-btn"  onclick="location.href='../index.html'" type="button">Food Quiz</button></div>
+        <div class="nav-button"><button class="nv-btn"  onclick="location.href='cheapUniqueRecipes/Foods.html'" type="button">Recipes</button></div>
+        <div class="nav-button"><button class="nv-btn" onclick="location.href='../grocery.html'" type="button">Grocery List</button></div>
+        <div class="nav-button"><button class="nv-btn" onclick="showabout()" type="button">About</button></div>
+        </div>
+    </div>
+
+
+        <div id="pageOne">
+        <h1>Cookie!</h1>
+        <!-- <img src=""> Make our own logo -->
+            
+        <p id="welcome">Welcome what would you like to do?</p>
+        <button id="nextButton" class="nextBtn" onclick="window.location.href = 'index.html'">Food Quiz</button>
+        <br><button class="nextBtn" id="grocery" onclick="grocery()">Grocery List</button>
+        <br><button class="nextBtn" onclick="recipes()">Recipes</button>
+        <br><button class="nextBtn" onclick="game()">Minigame</button>
+    </div>
+    <div id="game" class="hidden">
+        <div id="gamecontainer">
+            <button id="popupexit">X</button>
+            <iframe src="https://eidosn.github.io/Capy/" width="800px" height="450px"></iframe>
+        </div>
+    </div>
+
+</body>
+<script src="index.js"></script>
+<script src="navbar.js"></script>
+<script src="game.js"></script>
+</body>
+
+</html>

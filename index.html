@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cookie!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+<!--Nav bar-->
+    <div class="nav-container">
+        <p class="nav-title">Cookie</p>
+      <div class="nav-buttons">
+        <div class="nav-button"><button class="nv-btn"  onclick="location.href='../1mainpage.html'" type="button">Home</button></div>
+        <div class="nav-button"><button class="nv-btn"  onclick="location.href='../index.html'" type="button">Food Quiz</button></div>
+        <div class="nav-button"><button class="nv-btn"  onclick="location.href='cheapUniqueRecipes/Foods.html'" type="button">Recipes</button></div>
+        <div class="nav-button"><button class="nv-btn" onclick="location.href='../grocery.html'" type="button">Grocery List</button></div>
+        <div class="nav-button"><button class="nv-btn" onclick="showabout()" type="button">About</button></div>
+        </div>
+    </div>
+<!--Progress Bar-->
+    <h1>Cookie!</h1>
+        <div class="progressDiv">
+            <div class="progress"></div>
+        </div>
+        <!-- progress bar-->
+    <div id="quizpage" class="page visible">
+        <h1>Welcome to the Food Quiz!</h1>
+        <p class="allText">What would you like to eat?</p>
+        <p>
+            <label class="label" for="mealbtn">
+                <input type='radio' class="radio" id="mealbtn" name="mealsnack" value="Meal!"
+                    onclick="mealOptions(); meal=true">
+                Meal!
+            </label>
+        </p>
+        <p>
+            <label class="label" for="snackbtn">
+                <input type='radio' class="radio" id="snackbtn" name="mealsnack" value="Snack!" onclick="snacks()">
+               
+                Snack!
+            </label>
+        </p>
+      </div>
+    <!-- </div> -->
+
+
+    <div id="mealOption" class="page">
+        <button class="backbuttons" onclick="backtomainpage()">Back to menu?</button>
+        <p class="allText">What type of meal will it be?</p>
+        <p>
+            <label class="label" for="breakfastbtn">
+                <input type='radio' class="radio" id="breakfastbtn" name="BLD" value="Breakfast"
+                    onclick="desireflavorpage(); breakfastclicked()">
+               
+                
+                Breakfast
+            </label>
+        </p>
+        <p>
+            <label class="label" for="lunchbtn">
+                <input type='radio' class="radio" id="lunchbtn" name="BLD" value="Lunch"
+                    onclick="desireflavorpage(); lunchclicked()">
+              
+                Lunch
+            </label>
+        </p>
+        <p>
+            <label class="label" for="dinnerbtn">
+                <input type='radio' class="radio" id="dinnerbtn" name="BLD" value="Dinner"
+                    onclick="desireflavorpage(); dinnerclicked()">
+               
+                Dinner
+            </label>
+        </p>
+        
+
+            <button class="backbuttons" onclick="backbtn()">Back</button>
+    </div>
+    <!--Flavor ADD IMAGES-->
+    <div id="desiredFlavor" class="page"">
+    <button class="backbuttons" onclick="backtomainpage()">Back to menu?</button>
+    <p>Desired flavor?</p>
+        <p> <label class=" label" for="sweet">
+                <input name="flavor" type="radio" id="sweet" class="radio" value="Sweet" class="flavor-1" onclick="heavyLightfood();sweetclicked()">
+                Sweet
+            </label>
+        </p>
+        <p>
+            <label class="label" for="savory">
+                <input name="flavor" type="radio" id="savory" class="radio" value="Savory" class="flavor-1"
+                    onclick="heavyLightfood();savoryclicked()">
+                Savory
+            </label>
+        </p>
+        <p>
+            <label class="label" for="salty">
+                <input name="flavor" type="radio" id="salty" class="radio" value="Salty" class="flavor-1"
+                    onclick="heavyLightfood();saltyclicked()">
+                Salty
+            </label>
+    </p>
+        <p>
+            <label class="label" for="sour">
+                <input name="flavor" type="radio" id="sour" class="radio" value="Sour" class="flavor-2"
+                    onclick="heavyLightfood();sourclicked()">
+                Sour
+            </label>
+        </p>
+    <p>
+        <label class="label" for="random">
+            <input name="flavor" type="radio" id="random" class="radio" value="Random!" class="flavor-2"
+                onclick="heavyLightfood();randomclicked()">
+            Random!
+        </label>
+    </p>
+  
+
+        <button class="backbuttons" onclick="backbtn2()">Back</button>
+
+      
+
+    </div>
+
+    <div id="heavy/lightfood" class="page">
+        <button class="backbuttons" onclick="backtomainpage()">Back to menu?</button>
+        <p class="allText">Do you want to have a heavy or light dish?</p>
+        <p>
+            <label class="label" for="heavybtn">
+                <input type='radio' class="radio" id="heavybtn" name="hl" value="Heavy"
+                    onclick="heavyclicked(), Temp()">
+                Heavy
+            </label>
+        </p>
+        <p>
+            <label class="label" for="lightbtn">
+                <input type='radio' class="radio" id="lightbtn" name="hl" value="Light"
+                    onclick="lightclicked(), Temp()">
+                Light
+            </label>
+        </p>
+        <button class="backbuttons" onclick="backbtn3()">Back</button>
+
+     
+        <h2 class="progresspercent"></h2>
+
+    </div>
+
+
+    <div id="desiredTemp" class="page">
+        <button class="backbuttons" onclick="backtomainpage()">Back to menu?</button>
+        <h1>Hot or Cold Dish?</h1>
+        <p>
+            <label class="label" for="hotbtn">
+                <input type="radio" class="radio" id="hotbtn" name="temp" value="Hot" onclick="hotclicked()">
+                Hot
+            </label>
+        </p>
+        <p>
+            <label class="label" for="coldbtn">
+                <input type="radio" class="radio" id="coldbtn" name="temp" value="Cold" onclick="coldclicked()">
+                Cold
+            </label>
+        </p>
+        
+         <button class="backbuttons" onclick="backbtn4()">Back</button>
+
+       
+        <h2 class="progresspercent"></h2>
+
+        <p><button id="nextButton3" type="submit" class="nextBtn" onclick="changetoSubmitpage(), update()">Submit</button></p>
+    </div>
+    <div id="submitPage" class="page">
+        <img id="foodImage" src="">
+        <h1 id="foodTitlePlaceHolder"></h1>     
+        <p id="foodDescriptionPlaceHolder"></p>
+        <button class="foodquizbtn" id="backfood" onclick="backfood()">Back</buttton>
+        <button class="foodquizbtn"id="anotherFood" onclick="anotherFood()">Next</button>
+        <br><button class="foodquizbtn" onclick="backtomainpage()">Restart Quiz?</button>
+    </div>
+</body>
+<script src="index.js"></script>
+<script src="navbar.js"></script>
+</body>
+
+</html>

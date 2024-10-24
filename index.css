@@ -1,0 +1,281 @@
+@keyframes SlideinRight {
+  0% {
+        transform: translateX(-300px);
+  }
+
+  20%,
+  50%,
+  80%,
+  100%
+    {
+        transform: translateX(0)
+    }
+
+    40% {
+        transform: translateX(-30px)
+    }
+
+    60% {
+        transform: translateX(-15px)
+    }
+  }
+
+  .slideinright {
+    animation: SlideinRight 2s;
+  }
+
+
+  @keyframes SlideinLeft {
+    0% {
+        transform: translateX(300px);
+    }
+
+    20%,
+    50%,
+    80%,
+    100%
+     {
+        transform: translateX(0)
+    }
+
+    40% {
+        transform: translateX(30px)
+    }
+
+    60% {
+        transform: translateX(15px)
+    }
+  }
+
+  .page {
+    display: none;
+  }
+
+  @keyframes transitionIn{
+    from {
+      opacity:0;
+    } to {
+      opacity:1;
+    }
+  }
+
+  .page.visible {
+    display: block; 
+    animation: transitionIn 1s;
+  }
+
+  html {
+    justify-content:center;
+    text-align:center;
+    background-color:#CBC3E3 ;
+    border:solid 2px transparent;
+    height:100vh;
+    overflow: auto;
+  }
+
+  h1 {
+    font-size:50px;
+
+  }
+  p {
+    font-size:35px;
+  }
+
+#welcome{
+  font-size:25px;
+}
+  #pageOne img {
+    width: 280px;
+    height: fit-content;
+    border-radius:50%;
+  }
+
+  .nextBtn {
+    width:15%;
+    height: min-content;
+    margin-bottom: 30px;
+    background-color: #caf4fa;
+    border-radius: 10px;
+    font-size: 30px;
+    border: 2px solid #19c7e6;
+    opacity:1;
+    transition: opacity 230ms ease-in-out;
+    box-shadow: 5px 5px 7px lightblue;
+  }
+  .nextBtn:hover {
+    opacity:.5;
+  }
+  .radio{
+    display:none;
+  }
+
+.backbuttons {
+  box-shadow: 5px 5px 7px lightblue;
+  width: fit-content;
+  height: min-content;
+  margin-bottom: 20px;
+  background-color: #caf4fa;
+  border-radius: 10px;
+  font-size: 20px;
+  border: 2px solid #19c7e6;
+  opacity:1;
+  margin-top:10px;
+}
+
+
+  .label{
+    background-color:#94e9f5;
+    font-size: 50px;
+    border:3px solid #4dc9ed;
+    border-radius: 20px;
+    transition: background-color 230ms ease-in-out;
+    padding-left: 1em;
+    padding-right: 1em;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 7px lightblue;
+  }
+  .label:hover {
+    background-color: #4dc9ed}
+
+  .radio:checked + .label {
+    background-color: #4dc9ed
+  }
+
+  img {
+    height:50px;
+  }
+
+  .flavor-1{
+   display:flex;
+   align-items:center;
+   justify-content:center;
+  }
+
+  .flavor-2{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  }
+
+#foodDescriptionPlaceHolder {
+  font-size:20px;
+}
+
+#foodTitlePlaceHolder {
+  font-size:30px;
+}
+
+#foodImage {
+  height:300px;
+  width: 300px;
+  object-fit:cover; 
+  border-radius:20px;
+}
+
+
+
+
+@keyframes translate{
+  0% {  
+    transform: translateY(0px);
+
+  }
+  100%{
+    transform: translateY(-5px);
+  }
+}
+
+button:focus{
+  outline: none;
+}
+
+.progressDiv{
+  width: 70%;
+  height: 15px;
+  background: white;
+  border-radius:10px;
+  align-items:center;
+  margin: 0 auto;
+  border:2px black solid;
+  margin-bottom:20px;
+}
+
+.progressDiv > .progress{
+  width: 0%;
+  height: 15px;
+  background: #32dee0;
+  border-radius: 10px;
+}
+
+.progressDiv.invis{
+  display:none
+}
+.progresspercent.invis{
+  display:none
+}
+
+.foodquizbtn {
+  background-color:#94e9f5;
+  font-size: 25px;
+  border:3px solid #4dc9ed;
+  border-radius: 20px;
+  box-shadow: 5px 5px 7px lightblue;
+  margin-right:10px;
+  margin-top:10px;
+}
+
+.hidden {
+  display:none;
+}
+.shown{
+  display:block;
+}
+#gamecontainer {
+  width: 820px;
+  height: 420px; /* 600*/
+  position: relative;
+  background-color: #b8baba;
+  cursor:move;
+}
+
+iframe {
+  border: none;
+  position: absolute;
+  top: 40px;
+  width: 100%; 
+  height: calc(100% - 40px);
+  left: 0;
+}
+
+#popupexit {
+  background-color: red;
+  top: 0;
+  right: 0;
+  z-index: 1; 
+  font-size: 15px;
+  position: absolute; 
+  border: 2px black solid;
+  height:25px;
+
+}
+
+#popupexit:hover {
+  background-color: pink;
+}
+
+#about p {
+  display: flex;
+  font-size:20px;
+
+}
+#about-container {
+  background-color:#e4d5e5;
+  border-radius:10px;
+  border:2px black solid;
+  width:60%;
+  position: absolute;
+  top: 40%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+};
+
